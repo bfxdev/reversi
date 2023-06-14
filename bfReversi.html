@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>bfReversi</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<script language="javascript" type="text/javascript" src="Reversi.js"></script>
+		<script language="javascript" type="text/javascript" src="ReversiBoard.js"></script>
+		<script type="text/javascript">
+			// First action: hides menu
+			if(window.menu)
+				window.menu.hideSoftkeys();
+		</script>
+    <link rel="stylesheet" href="Reversi.css" type="text/css"/>
+	</head>
+	<body onLoad="javascript:onLoadHandler();" onResize="javascript:onResizeHandler();">
+
+		<div id="container">
+
+			<div id="board">
+				<script type="text/javascript">	
+
+	var l, c, html = "";
+
+	html += "<table class = 'board-table'>";
+
+	for (l = 0; l < 8; l++) 
+	{
+		html += "<tr class='board-row'>";
+		for (c = 0; c < 8; c++) 
+		{
+			html += "<td id='" + c + "" + l +	"' class='board-cell' ";
+			html += "onClick='javascript:boardClick(" + c +	"," +	l +	");'></td>";
+		}
+		html += "</tr>";
+	}
+	html += "</table>";
+
+	document.write(html);
+	
+				</script>
+			</div>
+			
+			<div id="menu">
+			
+				<p class="logo">bfReversi</p>
+
+				<div id="game-options" style="display:block;">				
+   
+					<p class="player-selection">
+						<img src='black.png'/>
+						<select id="black-player">
+							<option value="H" selected>Human</option>
+							<option value="C">Computer</option>
+						</select>
+					</p>
+
+					<p class="player-selection">
+						<img src='white.png'/>
+						<select id="white-player">
+							<option value="H">Human</option>
+							<option value="C" selected>Computer</option>
+						</select>
+					</p>
+
+					<div id="level-selection">
+						<select size="1" name="level">
+							<option value="1">Level 1</option>
+							<option value="2">Level 2</option>
+							<option value="3">Level 3</option>
+							<option value="4">Level 4</option>
+							<option value="5">Level 5</option>
+						</select>
+					</div>
+
+					<button onClick="javascript:startClick()" class="control-button">Start</button>
+					
+				</div>
+
+				<div id="game-status" style="display:none;">
+
+					<p>
+						<span id="score-black">
+							<img src='black.png'>
+							<span id="numBlacks" align="left"></span>
+						</span>
+
+						<span id="score-white">
+							<img src='white.png'>
+							<span id="numWhites" align="left"></span>
+						</span>
+					</p>
+
+					<!-- <p>
+						<textarea id="history" rows="4" cols="20"></textarea>
+					</p> -->
+					
+					<p>
+						<button onClick="javascript:restartClick()" class="control-button">Restart</button>
+						<button onClick="javascript:undoClick()" class="control-button">Undo</button>
+					</p>
+
+				</div>
+
+				<div id="info-message">Info Area</div>
+
+			</div>
+
+			<button onClick="javascript:exitClick()" class="exit-button">EXIT</button>
+			<button onClick="javascript:aboutClick()" class="about-button">ABOUT</button>
+
+		</div>
+
+		<div id="info-page" style="display:none;" onClick="javascript:infoPageClick();">
+			<p class="info-logo">bfReversi</p>
+			<h3>By B. Forgeau</h3>
+			<p></p>
+			
+			<h2>Game rules</h2>
+			<p>
+				The game of Reversi, also known as Othello, is played on a board of 8x8
+				cells (or squares). Players use discs thare are black on one side, and
+				white on the other. The game evolves by reversing the discs.
+				TBD
+			</p>
+
+			<h2>Strategy</h2>
+			<p>
+				TBD
+			</p>
+	
+			<h2>About this game</h2>
+			<p>
+				This game is a Web Widget. I wrote it to learn basics of CSS and Javascript.
+				I created the program form scratch using Aptana Studio with the Nokia WRT plugin.
+				The layout has been designed primarily for the 5800, but should adapt to
+				some other screen resolutions.
+			</p>
+			<p>
+				The design and parts of the code are derived from the Checkers
+				game by moubail.com.
+		</div>
+
+	</body>
+</html>

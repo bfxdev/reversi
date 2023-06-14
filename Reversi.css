@@ -1,0 +1,234 @@
+
+
+/* Remove all extra empty spaces by default*/
+* {
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+}
+
+/* BODY element, without class setting.
+ * Note: "portrait" and "landscape" classes are set on body to manage orientation*/
+body {
+	background-color: black;
+	background-image: url("wood-brown.jpg");
+	font-size: 10px;
+}
+
+/* BOARD */
+#board {
+	margin: 7px;
+	}
+
+.board-table {
+	border-width: 2px;
+	border-style: inset;
+	border-color: white;
+	border-collapse: collapse;
+	background-color: #118811;
+} 
+
+body.landscape #board {
+	float: left;
+}
+
+.board-row td {
+	width: 43px;
+	height: 43px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #004400;
+	text-align: center;
+}
+
+#board.dim240 td {width: 28px; height: 28px;}
+#board.dim352 td {width: 42px; height: 42px;}
+#board.dim360 td {width: 43px; height: 43px;}
+
+
+#board img {
+	width:75%;
+	height:75%;
+}
+
+.playable-white {background-color: #00aa00;}
+.playable-black {background-color: #007700;}
+
+/* LOGO */
+
+.logo {
+	font-family: Times;
+	font-style: italic;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 4em;
+	vertical-align: middle;
+	visibility: visible;
+	padding-bottom: 0.4em;
+	padding-top: 1em;
+}
+
+body.portrait .logo {
+	position: fixed;
+	bottom: 4px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	left: 20%;
+	right: 20%;
+}
+
+/* MENU */
+
+#menu {
+	color: black;
+	text-align: center;
+}
+
+.player-selection img {
+	height:20px;
+	width:20px;
+	margin: 2px;
+	vertical-align: middle;
+}
+
+/* CONTROLS */
+
+* button, * select {
+	background-image: url("wood.jpg");
+	background-color: inherit;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	color: black;
+	font-weight: bold;
+	margin: 5px;
+	padding: 2px;
+	}
+
+* select {
+	font-size: 2em;
+}
+
+* button {
+	font-size: 3em;
+	font-weight: bold;
+}
+
+* option {
+	background-color: black;
+	color: white;
+}
+
+/* SCORE */
+
+#score-black span, #score-white span{
+	font-weight: bolder;
+	font-size: 3em;
+	height: 40px;
+	width: 40px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+#score-black img, #score-white img {
+	height: 30px;
+	width: 30px;
+	font-weight: bolder;
+	font-size: 3em;
+	vertical-align: middle;
+	margin-right: 0.3em;
+}
+
+#score-black {
+	color: black;
+	margin-right: 2em;
+}
+
+#score-white {
+	color: white;
+}
+
+/* INFO MESSAGE */
+
+#info-message {
+	font-size: 1.5em;
+	line-height: 3em;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* HISTORY */
+#history * {
+	font-family: monospace;
+	font-size: 1.5em;
+	display: compact;
+	margin: 5px;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	padding: 2px;
+}
+
+/* INFO PAGE */
+
+#info-page {
+	border-width: 1px;
+	border-style: outset;
+	border-color: gray;
+	background-color: black;
+	color: white;
+	text-align: center;
+	margin: 10px;
+	font-size: 1.8em;
+}
+
+.info-text h1, h2, h3 {
+	text-align: center;
+	line-height: 2em;
+}
+
+.info-text p {
+	text-align: justify;
+	line-height: 2em;
+}
+
+.info-logo {
+	font-family: Times;
+	font-style: italic;
+	font-weight: bolder;
+	text-align: center;
+	font-size: 3em;
+	vertical-align: middle;
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+/* SIDE BUTTONS */
+
+.exit-button, .about-button {
+	position: fixed;
+	font-family: Arial;
+	font-weight: bold;
+	background: none;
+	background-color: black;
+	font-size: 2em;
+	font-style: italic;
+	color: white;
+	margin: 0px;
+	padding: 3px;
+}
+
+.exit-button {
+	right: 2px;
+	bottom: 2px;
+}
+
+body.portrait .about-button {
+	left: 4px;
+	bottom: 4px;
+}
+
+body.landscape .about-button {
+	right: 4px;
+	top: 4px;
+}
