@@ -2,7 +2,7 @@
 
 bfReversi is an HTML/CSS/Javascript implementation of the [Reversi game](https://en.wikipedia.org/wiki/Reversi) (also known as Othello).
 
-Have a look at the online playable version.
+Have a look at the [online playable version](https://bfxdev.github.io/reversi/bfReversi.html).
 
 ![screenshot](screenshot.png)
 
