@@ -4,7 +4,7 @@ bfReversi is an HTML/CSS/Javascript implementation of the [Reversi game](https:/
 
 Have a look at the [online playable version](https://bfxdev.github.io/reversi/bfReversi.html).
 
-![screenshot](screenshot.png)
+[![screenshot](screenshot.png)](https://bfxdev.github.io/reversi/bfReversi.html)
 
 I wrote it to learn CSS and Javascript. The play algorithm is not very sophisticated as it only choses the next position to be played based on the maximum number of taken pieces added with a weight depending on the played position (the difficulty level is selectable but makes no difference).
 
